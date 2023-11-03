@@ -24,6 +24,40 @@ My first assignment has three parts.
 
 ## (b)
 
+**1) Performance:**
+
+-   Python usually faster than R for computation and processing tasks.
+
+-   R may be slower for complex computations compared to Python, especially for large datasets.
+
+**2) Assignment Syntax:**
+
+-   R is using "\<-" syntax.
+
+    -   Code Example:
+
+        -   a \<- c(1, 2, 3)
+
+-   Python is using "=" syntax.
+
+    -   Code Example:
+
+        -   a = \[1, 2, 3\]
+
+**3) Using of Vectors:**
+
+-   R is a programming language that uses vectors and thus provides many conveniences. For example, coding errors are minimal in R. Variables are stored as vectors in R.
+
+    -   Example:
+
+        -   variable \<- c(2210469025, "Berkay", "Ankara")
+
+-   In Python, lists are generally used. And we have to be very careful not to make mistakes.
+
+    -   Example:
+
+        -   list = \[2210469025, "Berkay", "Ankara"\]
+
 ## (c)
 
 ```{r}
