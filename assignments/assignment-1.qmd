@@ -10,7 +10,7 @@ format:
 
 My first assignment has three parts.
 
-# (a)
+## (a)
 
 **The speaker in this YouTube lesson goes over how to use pins in a Codenames app to generate daily codenames.**
 
