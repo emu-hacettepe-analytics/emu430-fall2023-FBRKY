@@ -10,15 +10,15 @@ format:
 
 My first assignment has three parts.
 
-## (a)
+# (a)
 
-##    The speaker in this YouTube lesson goes over how to use pins in a Codenames app to generate daily codenames. 
+**The speaker in this YouTube lesson goes over how to use pins in a Codenames app to generate daily codenames.**
 
-## They describe how to use pins to send and save codename information via email, Slack bots, and Shiny apps, among other channels. 
+**They describe how to use pins to send and save codename information via email, Slack bots, and Shiny apps, among other channels.**
 
-## They recommend writing a script that generates codenames and updates the pin using R Markdown. with addition, other packages like as IDs and dplyr can be used to aid with the codename generation process. 
+**They recommend writing a script that generates codenames and updates the pin using R Markdown. with addition, other packages like as IDs and dplyr can be used to aid with the codename generation process.**
 
-## Next, Katie Masiello walks through the process of using RStudio to construct the app. The user's codename, which might be based on their session name or default username, is displayed in the app's Shiny panel. Users have the option to enter a hidden alias or their own name as their codename. To filter and retrieve their private codename, users can build their own codename table in RStudio. The application will undergo local testing before being released as a Codenames generator.
+**Next, Katie Masiello walks through the process of using RStudio to construct the app. The user's codename, which might be based on their session name or default username, is displayed in the app's Shiny panel. Users have the option to enter a hidden alias or their own name as their codename. To filter and retrieve their private codename, users can build their own codename table in RStudio. The application will undergo local testing before being released as a Codenames generator.**
 
 **Video Link : <https://youtu.be/MQ5L3TSQVys?feature=shared>**
 
