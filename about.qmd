@@ -7,11 +7,9 @@ sidebar: false
 
 -   B.S., Industrial Engineering, Hacettepe University, Turkey, 2021 - ongoing.
 
-
 ## Internships
 
 1.  MAN Truck and Bus, year 2023
-
 
 # Competencies
 
@@ -20,4 +18,3 @@ R, Quarto, Git, Python, Matlab, AutoCad, Excel
 # Hobbies
 
 Chess, Exercise, Swimming, Intelligence Games, Basketball.
- 
