@@ -102,7 +102,7 @@
     "href": "assignments/assignment-2.html#part-b",
     "title": "Assignment 2",
     "section": "Part B",
-    "text": "Part B\n\n\nCode\nkable(moviedf %&gt;% filter(Title == \"Ölümlü Dünya\" | Title == \"Yedinci Kogustaki Mucize\" | Title == \"Dag II\"), caption = \"My Bests\", col.names = c(\"Title\", \"Year\", \"Duration\", \"Rating\", \"Votes\"))\n\n\n\nMy Bests\n\n\nTitle\nYear\nDuration\nRating\nVotes\n\n\n\n\nDag II\n2016\n135\n8.2\n109882\n\n\nÖlümlü Dünya\n2018\n107\n7.6\n30296\n\n\nYedinci Kogustaki Mucize\n2019\n132\n8.2\n54200"
+    "text": "Part B\n\n\nCode\nkable(moviedf %&gt;% filter(Title == \"Recep İvedik 3\" | Title == \"Eyyvah Eyvah\" | Title == \"Çok Filim Hareketler Bunlar\"), caption = \"My Bests\", col.names = c(\"Title\", \"Year\", \"Duration\", \"Rating\", \"Votes\"))\n\n\n\nMy Bests\n\n\nTitle\nYear\nDuration\nRating\nVotes\n\n\n\n\nEyyvah Eyvah\n2010\n104\n7.0\n21447\n\n\nÇok Filim Hareketler Bunlar\n2010\n104\n4.5\n5161"
   },
   {
     "objectID": "assignments/assignment-2.html#part-c",
