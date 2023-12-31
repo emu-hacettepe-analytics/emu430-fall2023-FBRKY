@@ -18,7 +18,7 @@
     "href": "assignments/assignment-2.html",
     "title": "Assignment 2",
     "section": "",
-    "text": "{r} #| code-fold: true url1 &lt;- c(“https://m.imdb.com/search/title/?title_type=feature&release_date=2010-01-01,2023-12-31&sort=release_date,asc&num_votes=2500,&country_of_origin=TR&count=250”) url2 &lt;- c(“https://m.imdb.com/search/title/?title_type=feature&release_date=,2009-12-31&sort=release_date,asc&num_votes=2500,&country_of_origin=TR&count=250”)"
+    "text": "Code\nurl1 &lt;- c(\"https://m.imdb.com/search/title/?title_type=feature&release_date=2010-01-01,2023-12-31&sort=release_date,asc&num_votes=2500,&country_of_origin=TR&count=250\")\nurl2 &lt;- c(\"https://m.imdb.com/search/title/?title_type=feature&release_date=,2009-12-31&sort=release_date,asc&num_votes=2500,&country_of_origin=TR&count=250\")"
   },
   {
     "objectID": "about.html",
@@ -95,35 +95,35 @@
     "href": "assignments/assignment-2.html#part-a",
     "title": "Assignment 2",
     "section": "Part A",
-    "text": "Part A\n{r} #| code-fold: true movies &lt;- moviedf %&gt;% arrange(desc(Rating))\n{r} #| code-fold: true kable(movies %&gt;% head(5), caption = “Top 5”, col.names = c(“Title”, “Year”, “Duration”, “Rating”, “Votes”))\n{r} #| code-fold: true kable(movies %&gt;% tail(5), caption = “Bottom 5”, col.names = c(“Title”, “Year”, “Duration”, “Rating”, “Votes”))"
+    "text": "Part A\n\n\nCode\nmovies &lt;- moviedf %&gt;% \n  arrange(desc(Rating))\n\n\n\n\nCode\nkable(\n  movies %&gt;%\n    arrange(desc(rating)) %&gt;%\n    head(5),\n  format = \"html\",\n  caption = \"Top 5 Movies based on Rating\",\n  col.names = c(\"Title\", \"Year\", \"Duration\", \"Rating\", \"Votes\")\n)\n\n\n\nTop 5 Movies based on Rating\n\n\nTitle\nYear\nDuration\nRating\nVotes\n\n\n\n\nHükümet Kadin\n2013\n99\n6.5\n9184\n\n\nArabesk\n1989\n92\n8.0\n8303\n\n\nSenden Bana Kalan\n2015\n117\n6.5\n3403\n\n\nYolun Açik Olsun\n2022\n119\n6.5\n2699\n\n\nAykut Eniste 2\n2021\n115\n6.5\n3597\n\n\n\n\n\n\n\n\n\nCode\nkable(movies %&gt;% tail(5), caption = \"Bottom 5\", col.names = c(\"Title\", \"Year\", \"Duration\", \"Rating\", \"Votes\"))\n\n\n\nBottom 5\n\n\n\nTitle\nYear\nDuration\nRating\nVotes\n\n\n\n\n466\nCumali Ceber 2\n2018\n100\n1.2\n10229\n\n\n467\n15/07 Safak Vakti\n2021\n95\n1.2\n20608\n\n\n468\nMüjde\n2022\n48\n1.2\n9920\n\n\n469\nReis\n2017\n108\n1.0\n73974\n\n\n470\nCumali Ceber: Allah Seni Alsin\n2017\n100\n1.0\n39268"
   },
   {
     "objectID": "assignments/assignment-2.html#part-b",
     "href": "assignments/assignment-2.html#part-b",
     "title": "Assignment 2",
     "section": "Part B",
-    "text": "Part B\n{r} #| code-fold: true kable(moviedf %&gt;% filter(Title == “Ölümlü Dünya” | Title == “Yedinci Kogustaki Mucize” | Title == “Dag II”), caption = “My Bests”, col.names = c(“Title”, “Year”, “Duration”, “Rating”, “Votes”))"
+    "text": "Part B\n\n\nCode\nkable(moviedf %&gt;% filter(Title == \"Ölümlü Dünya\" | Title == \"Yedinci Kogustaki Mucize\" | Title == \"Dag II\"), caption = \"My Bests\", col.names = c(\"Title\", \"Year\", \"Duration\", \"Rating\", \"Votes\"))\n\n\n\nMy Bests\n\n\nTitle\nYear\nDuration\nRating\nVotes\n\n\n\n\nDag II\n2016\n135\n8.2\n109882\n\n\nÖlümlü Dünya\n2018\n107\n7.6\n30296\n\n\nYedinci Kogustaki Mucize\n2019\n132\n8.2\n54200"
   },
   {
     "objectID": "assignments/assignment-2.html#part-c",
     "href": "assignments/assignment-2.html#part-c",
     "title": "Assignment 2",
     "section": "Part C",
-    "text": "Part C\n{r} #| code-fold: true moviedf %&gt;% group_by(Year) %&gt;% summarize(avg = mean(Rating)) %&gt;% ggplot(aes(x = Year, y = avg)) + geom_point() + ggtitle(“Yearly Rating Averages”)\nThe graph shows that the rating is decreasing year by year.\n{r} #| code-fold: true ggplot(moviedf, aes(x = factor(Year))) + geom_bar(fill = “yellow”, color = “black”) + ggtitle(“Number of Movies Over the Years”) + labs(x = “Year”, y = “Number of Movies”) + theme(legend.position = “none”, axis.text.x = element_text(angle = 60) )\n{r} #| code-fold: true moviedf\\(Year &lt;- as.factor(moviedf\\)Year) ggplot(moviedf, aes(x = Year, y = Rating, fill = factor(Year))) + geom_boxplot(color = “black”,width = 0.7) + labs(x = “Year”, y = “Rating”) + ggtitle(“Box Plots of Movie Ratings”) + theme(legend.position = “none”, axis.text.x = element_text(angle = 60) )"
+    "text": "Part C\n\n\nCode\nmoviedf %&gt;% \n  group_by(Year) %&gt;%\n  summarize(avg = mean(Rating)) %&gt;%\n  ggplot(aes(x = Year, y = avg)) + geom_point() +\n  ggtitle(\"Yearly Rating Averages\")\n\n\n\n\n\nThe plot clearly show that ratings decrease over the years.\n\n\nCode\nggplot(moviedf, aes(x = factor(Year))) +\n  geom_bar(fill = \"yellow\", color = \"black\") +\n  ggtitle(\"Number of Movies Over the Years\") +\n  labs(x = \"Year\", y = \"Number of Movies\") +\n  theme(legend.position = \"none\",\n        axis.text.x = element_text(angle = 60)\n  )\n\n\n\n\n\n\n\nCode\nmoviedf$Year &lt;- as.factor(moviedf$Year)\nggplot(moviedf, aes(x = Year, y = Rating, fill = factor(Year))) +\n  geom_boxplot(color = \"black\",width = 0.7) +\n  labs(x = \"Year\", y = \"Rating\") +\n  ggtitle(\"Box Plots of Movie Ratings\") +\n  theme(legend.position = \"none\",\n        axis.text.x = element_text(angle = 60)\n  )"
   },
   {
     "objectID": "assignments/assignment-2.html#part-d",
     "href": "assignments/assignment-2.html#part-d",
     "title": "Assignment 2",
     "section": "Part D",
-    "text": "Part D\n{r} #| code-fold: true corr &lt;- cor(moviedf\\(Votes, moviedf\\)Rating) cat(“Correlation between Votes and Ratings:”, corr)\nThe correlation between votes and ratings."
+    "text": "Part D\n\n\nCode\ncorr &lt;- cor(moviedf$Votes, moviedf$Rating)\ncat(\"Correlation between Votes and Ratings:\", corr)\n\n\nCorrelation between Votes and Ratings: 0.1311088\n\n\nThe correlation between votes and ratings."
   },
   {
     "objectID": "assignments/assignment-2.html#part-e",
     "href": "assignments/assignment-2.html#part-e",
     "title": "Assignment 2",
     "section": "Part E",
-    "text": "Part E\n{r} #| code-fold: true corr &lt;- cor(moviedf\\(Duration, moviedf\\)Rating) cat(“Correlation between Votes and Ratings:”, corr)\nThe correlation between duration and ratings."
+    "text": "Part E\n\n\nCode\ncorr &lt;- cor(moviedf$Duration, moviedf$Rating)\ncat(\"Correlation between Votes and Ratings:\", corr)\n\n\nCorrelation between Votes and Ratings: 0.03331057\n\n\nThe correlation between duration and ratings."
   },
   {
     "objectID": "assignments/assignment-2.html#part-a-1",
