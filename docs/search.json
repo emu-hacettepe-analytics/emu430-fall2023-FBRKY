@@ -18,7 +18,7 @@
     "href": "assignments/assignment-2.html",
     "title": "Assignment 2",
     "section": "",
-    "text": "Assignment 2\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\n Back to top"
+    "text": "{r} #| code-fold: true url1 &lt;- c(“https://m.imdb.com/search/title/?title_type=feature&release_date=2010-01-01,2023-12-31&sort=release_date,asc&num_votes=2500,&country_of_origin=TR&count=250”) url2 &lt;- c(“https://m.imdb.com/search/title/?title_type=feature&release_date=,2009-12-31&sort=release_date,asc&num_votes=2500,&country_of_origin=TR&count=250”)"
   },
   {
     "objectID": "about.html",
@@ -89,5 +89,75 @@
     "title": "Assignment 1",
     "section": "",
     "text": "The speaker in this YouTube lesson goes over how to use pins in a Codenames app to generate daily codenames.\nThey describe how to use pins to send and save codename information via email, Slack bots, and Shiny apps, among other channels.\nThey recommend writing a script that generates codenames and updates the pin using R Markdown. with addition, other packages like as IDs and dplyr can be used to aid with the codename generation process.\nNext, Katie Masiello walks through the process of using RStudio to construct the app. The user’s codename, which might be based on their session name or default username, is displayed in the app’s Shiny panel. Users have the option to enter a hidden alias or their own name as their codename. To filter and retrieve their private codename, users can build their own codename table in RStudio. The application will undergo local testing before being released as a Codenames generator.\nVideo Link : https://youtu.be/MQ5L3TSQVys?feature=shared"
+  },
+  {
+    "objectID": "assignments/assignment-2.html#part-a",
+    "href": "assignments/assignment-2.html#part-a",
+    "title": "Assignment 2",
+    "section": "Part A",
+    "text": "Part A\n{r} #| code-fold: true movies &lt;- moviedf %&gt;% arrange(desc(Rating))\n{r} #| code-fold: true kable(movies %&gt;% head(5), caption = “Top 5”, col.names = c(“Title”, “Year”, “Duration”, “Rating”, “Votes”))\n{r} #| code-fold: true kable(movies %&gt;% tail(5), caption = “Bottom 5”, col.names = c(“Title”, “Year”, “Duration”, “Rating”, “Votes”))"
+  },
+  {
+    "objectID": "assignments/assignment-2.html#part-b",
+    "href": "assignments/assignment-2.html#part-b",
+    "title": "Assignment 2",
+    "section": "Part B",
+    "text": "Part B\n{r} #| code-fold: true kable(moviedf %&gt;% filter(Title == “Ölümlü Dünya” | Title == “Yedinci Kogustaki Mucize” | Title == “Dag II”), caption = “My Bests”, col.names = c(“Title”, “Year”, “Duration”, “Rating”, “Votes”))"
+  },
+  {
+    "objectID": "assignments/assignment-2.html#part-c",
+    "href": "assignments/assignment-2.html#part-c",
+    "title": "Assignment 2",
+    "section": "Part C",
+    "text": "Part C\n{r} #| code-fold: true moviedf %&gt;% group_by(Year) %&gt;% summarize(avg = mean(Rating)) %&gt;% ggplot(aes(x = Year, y = avg)) + geom_point() + ggtitle(“Yearly Rating Averages”)\nThe graph shows that the rating is decreasing year by year.\n{r} #| code-fold: true ggplot(moviedf, aes(x = factor(Year))) + geom_bar(fill = “yellow”, color = “black”) + ggtitle(“Number of Movies Over the Years”) + labs(x = “Year”, y = “Number of Movies”) + theme(legend.position = “none”, axis.text.x = element_text(angle = 60) )\n{r} #| code-fold: true moviedf\\(Year &lt;- as.factor(moviedf\\)Year) ggplot(moviedf, aes(x = Year, y = Rating, fill = factor(Year))) + geom_boxplot(color = “black”,width = 0.7) + labs(x = “Year”, y = “Rating”) + ggtitle(“Box Plots of Movie Ratings”) + theme(legend.position = “none”, axis.text.x = element_text(angle = 60) )"
+  },
+  {
+    "objectID": "assignments/assignment-2.html#part-d",
+    "href": "assignments/assignment-2.html#part-d",
+    "title": "Assignment 2",
+    "section": "Part D",
+    "text": "Part D\n{r} #| code-fold: true corr &lt;- cor(moviedf\\(Votes, moviedf\\)Rating) cat(“Correlation between Votes and Ratings:”, corr)\nThe correlation between votes and ratings."
+  },
+  {
+    "objectID": "assignments/assignment-2.html#part-e",
+    "href": "assignments/assignment-2.html#part-e",
+    "title": "Assignment 2",
+    "section": "Part E",
+    "text": "Part E\n{r} #| code-fold: true corr &lt;- cor(moviedf\\(Duration, moviedf\\)Rating) cat(“Correlation between Votes and Ratings:”, corr)\nThe correlation between duration and ratings."
+  },
+  {
+    "objectID": "assignments/assignment-2.html#part-a-1",
+    "href": "assignments/assignment-2.html#part-a-1",
+    "title": "Assignment 2",
+    "section": "Part A",
+    "text": "Part A\n{r} #| code-fold: true movies &lt;- moviedf %&gt;% arrange(desc(Rating))\n{r} #| code-fold: true kable(movies %&gt;% head(5), caption = “Top 5”, col.names = c(“Title”, “Year”, “Duration”, “Rating”, “Votes”))\n{r} #| code-fold: true kable(movies %&gt;% tail(5), caption = “Bottom 5”, col.names = c(“Title”, “Year”, “Duration”, “Rating”, “Votes”))"
+  },
+  {
+    "objectID": "assignments/assignment-2.html#part-b-1",
+    "href": "assignments/assignment-2.html#part-b-1",
+    "title": "Assignment 2",
+    "section": "Part B",
+    "text": "Part B\n{r} #| code-fold: true kable(moviedf %&gt;% filter(Title == “Ölümlü Dünya” | Title == “Yedinci Kogustaki Mucize” | Title == “Dag II”), caption = “My Bests”, col.names = c(“Title”, “Year”, “Duration”, “Rating”, “Votes”))"
+  },
+  {
+    "objectID": "assignments/assignment-2.html#part-c-1",
+    "href": "assignments/assignment-2.html#part-c-1",
+    "title": "Assignment 2",
+    "section": "Part C",
+    "text": "Part C\n{r} #| code-fold: true moviedf %&gt;% group_by(Year) %&gt;% summarize(avg = mean(Rating)) %&gt;% ggplot(aes(x = Year, y = avg)) + geom_point() + ggtitle(“Yearly Rating Averages”)\nThe graph shows that the rating is decreasing year by year.\n{r} #| code-fold: true ggplot(moviedf, aes(x = factor(Year))) + geom_bar(fill = “yellow”, color = “black”) + ggtitle(“Number of Movies Over the Years”) + labs(x = “Year”, y = “Number of Movies”) + theme(legend.position = “none”, axis.text.x = element_text(angle = 60) )\n{r} #| code-fold: true moviedf\\(Year &lt;- as.factor(moviedf\\)Year) ggplot(moviedf, aes(x = Year, y = Rating, fill = factor(Year))) + geom_boxplot(color = “black”,width = 0.7) + labs(x = “Year”, y = “Rating”) + ggtitle(“Box Plots of Movie Ratings”) + theme(legend.position = “none”, axis.text.x = element_text(angle = 60) )"
+  },
+  {
+    "objectID": "assignments/assignment-2.html#part-d-1",
+    "href": "assignments/assignment-2.html#part-d-1",
+    "title": "Assignment 2",
+    "section": "Part D",
+    "text": "Part D\n{r} #| code-fold: true corr &lt;- cor(moviedf\\(Votes, moviedf\\)Rating) cat(“Correlation between Votes and Ratings:”, corr)\nThe correlation between votes and ratings."
+  },
+  {
+    "objectID": "assignments/assignment-2.html#part-e-1",
+    "href": "assignments/assignment-2.html#part-e-1",
+    "title": "Assignment 2",
+    "section": "Part E",
+    "text": "Part E\n{r} #| code-fold: true corr &lt;- cor(moviedf\\(Duration, moviedf\\)Rating) cat(“Correlation between Votes and Ratings:”, corr)\nThe correlation between duration and ratings."
   }
 ]
