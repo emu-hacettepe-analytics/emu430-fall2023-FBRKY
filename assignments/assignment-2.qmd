@@ -156,7 +156,7 @@ kable(movies %>% tail(5), caption = "Bottom 5", col.names = c("Title", "Year", "
 
 ```{r}
 #| code-fold: true
-kable(moviedf %>% filter(Title == "Recep İvedik 3" | Title == "Eyyvah Eyvah" | Title == "Çok Filim Hareketler Bunlar"), caption = "My Bests", col.names = c("Title", "Year", "Duration", "Rating", "Votes"))
+kable(moviedf %>% filter(Title == "Recep Ivedik 3" | Title == "Eyyvah Eyvah" | Title == "Çok Filim Hareketler Bunlar"), caption = "My Bests", col.names = c("Title", "Year", "Duration", "Rating", "Votes"))
 ```
 
 ## Part C

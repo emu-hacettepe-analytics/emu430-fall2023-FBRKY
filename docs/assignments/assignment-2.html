@@ -507,7 +507,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(moviedf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Title <span class="sc">==</span> <span class="st">"Recep İvedik 3"</span> <span class="sc">|</span> Title <span class="sc">==</span> <span class="st">"Eyyvah Eyvah"</span> <span class="sc">|</span> Title <span class="sc">==</span> <span class="st">"Çok Filim Hareketler Bunlar"</span>), <span class="at">caption =</span> <span class="st">"My Bests"</span>, <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Title"</span>, <span class="st">"Year"</span>, <span class="st">"Duration"</span>, <span class="st">"Rating"</span>, <span class="st">"Votes"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(moviedf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Title <span class="sc">==</span> <span class="st">"Recep Ivedik 3"</span> <span class="sc">|</span> Title <span class="sc">==</span> <span class="st">"Eyyvah Eyvah"</span> <span class="sc">|</span> Title <span class="sc">==</span> <span class="st">"Çok Filim Hareketler Bunlar"</span>), <span class="at">caption =</span> <span class="st">"My Bests"</span>, <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Title"</span>, <span class="st">"Year"</span>, <span class="st">"Duration"</span>, <span class="st">"Rating"</span>, <span class="st">"Votes"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
@@ -523,13 +523,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">Recep Ivedik 3</td>
+<td style="text-align: right;">2010</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">4.2</td>
+<td style="text-align: right;">20792</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">Eyyvah Eyvah</td>
 <td style="text-align: right;">2010</td>
 <td style="text-align: right;">104</td>
 <td style="text-align: right;">7.0</td>
 <td style="text-align: right;">21447</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Çok Filim Hareketler Bunlar</td>
 <td style="text-align: right;">2010</td>
 <td style="text-align: right;">104</td>
@@ -1483,7 +1490,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb17-166"><a href="#cb17-166" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-169"><a href="#cb17-169" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb17-170"><a href="#cb17-170" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
-<span id="cb17-171"><a href="#cb17-171" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(moviedf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Title <span class="sc">==</span> <span class="st">"Recep İvedik 3"</span> <span class="sc">|</span> Title <span class="sc">==</span> <span class="st">"Eyyvah Eyvah"</span> <span class="sc">|</span> Title <span class="sc">==</span> <span class="st">"Çok Filim Hareketler Bunlar"</span>), <span class="at">caption =</span> <span class="st">"My Bests"</span>, <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Title"</span>, <span class="st">"Year"</span>, <span class="st">"Duration"</span>, <span class="st">"Rating"</span>, <span class="st">"Votes"</span>))</span>
+<span id="cb17-171"><a href="#cb17-171" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(moviedf <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Title <span class="sc">==</span> <span class="st">"Recep Ivedik 3"</span> <span class="sc">|</span> Title <span class="sc">==</span> <span class="st">"Eyyvah Eyvah"</span> <span class="sc">|</span> Title <span class="sc">==</span> <span class="st">"Çok Filim Hareketler Bunlar"</span>), <span class="at">caption =</span> <span class="st">"My Bests"</span>, <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Title"</span>, <span class="st">"Year"</span>, <span class="st">"Duration"</span>, <span class="st">"Rating"</span>, <span class="st">"Votes"</span>))</span>
 <span id="cb17-172"><a href="#cb17-172" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb17-173"><a href="#cb17-173" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-174"><a href="#cb17-174" aria-hidden="true" tabindex="-1"></a><span class="fu">## Part C</span></span>
